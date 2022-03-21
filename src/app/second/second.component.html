@@ -1,1 +1,11 @@
-<p>second works!</p>
+<div style="margin: 100px auto;text-align: center;">
+  <div>
+    <img [src]="imageSrc" width="300px" height="300px">
+  </div>
+  <div>
+    <button class="btn m-1 btn-primary" (click)="startShow()">Slide</button>
+    <button class="btn m-1 btn-success" (click)="nextShow()">Next</button>
+    <button class="btn m-1 btn-success" (click)="prevShow()">Previous</button>
+    <button class="btn m-1 btn-danger" (click)="stopShow()">Stop</button>
+  </div>
+</div>

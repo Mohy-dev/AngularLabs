@@ -7,5 +7,9 @@ import { Component } from "@angular/core";
 })
 
 export class FirstComponent{
+  name = "";
 
+  clear(){
+    this.name = "";
+  }
 }
