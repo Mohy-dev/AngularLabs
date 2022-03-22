@@ -6,7 +6,7 @@
       Now, you can move on
     </div>
     <ng-template #notOk>
-      <div *ngIf=" age < 17;" class="m-2 text-center">
+      <div *ngIf=" age <= 17 && age != 0;" class="m-2 text-center">
         <img src="../../assets/Images/we-dont-do-that-here-black-panther.gif" width="300px" alt=":X">
       </div>
     </ng-template>
@@ -14,3 +14,6 @@
       (click)="AddStudent()">Submit</button>
   </div>
 </div>
+
+<!-- template driven form -->
+<!-- Reactive form -->
