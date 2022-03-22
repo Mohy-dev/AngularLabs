@@ -1,0 +1,18 @@
+<div class="container border rounded" style="margin-top: 5rem;">
+  <div>
+    <table class="table table-warning mt-3 text-center">
+      <thead class="bg-warning">
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let person of ppl">
+          <td>{{person.count}}</td>
+          <td>{{person.name}}</td>
+          <td>{{person.age}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

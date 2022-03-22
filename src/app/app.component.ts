@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lab3';
+
+  ppl:{name: any, age:any}[]=[];
+
+  GetData(data:any){
+    this.ppl = data;
+  }
 }

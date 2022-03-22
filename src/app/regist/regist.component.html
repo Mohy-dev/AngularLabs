@@ -1,0 +1,16 @@
+<div class="container border rounded" style="margin-top: 10rem">
+  <div style="margin: 10px auto;" class="text-center col">
+    <input class="row-8 m-1 text-center" type="text" placeholder="Name" [(ngModel)]="name" pattern="[a-zA-Z ]*">
+    <input class=" row-8 m-1 text-center" type="text" placeholder="Age" [(ngModel)]="age"><br>
+    <div style="width: 40%; margin: 5px auto;" class="bg-success text-center" *ngIf=" age >= 18; else notOk">
+      Now, you can move on
+    </div>
+    <ng-template #notOk>
+      <div *ngIf=" age < 17;" class="m-2 text-center">
+        <img src="../../assets/Images/we-dont-do-that-here-black-panther.gif" width="300px" alt=":X">
+      </div>
+    </ng-template>
+    <button style=" margin-top: 1rem;" class="m-1" type="button" class="btn btn-danger"
+      (click)="AddStudent()">Submit</button>
+  </div>
+</div>
