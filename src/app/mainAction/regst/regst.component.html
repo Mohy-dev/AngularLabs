@@ -1,7 +1,7 @@
 <form [formGroup]="formValidation" class="form">
   <div class=" form-group row justify-content-center">
-    <input [(ngModel)]="name" formControlName="name1" formControlName="name2" formControlName="name3" type="text"
-      placeholder="Name" class="text-center m-2 form-control w-30" style="width:40%; margin: 1px auto;">
+    <input [(ngModel)]="name" formControlName="name" type="text" placeholder="Name"
+      class="text-center m-2 form-control w-30" style="width:40%; margin: 1px auto;">
   </div>
   <div *ngIf="isNameValid1" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
     Name is Required
