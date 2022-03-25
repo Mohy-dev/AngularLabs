@@ -19,8 +19,10 @@ import { AddComponent } from './add/add.component';
 
 
 let routes:Routes = [
+  {path:"", component:HerosComponent},
   {path:"heros", component:HerosComponent},
-  {path:"add", component:AddComponent}
+  {path:"add", component:AddComponent},
+  {path:"**", component:ErrorComponent}
 ]
 
 
