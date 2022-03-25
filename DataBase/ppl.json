@@ -1,0 +1,44 @@
+{
+  "SuperHeros": [
+    {
+      "id": 1,
+      "name": "Superman",
+      "email": "superman@gmail.com",
+      "adress": "department",
+      "powers": "fly-laser-power",
+      "picture": "../../assets/Images/super.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Batman",
+      "email": "batman@gmail.com",
+      "adress": "cave",
+      "powers": "rich-martial_arts-smart",
+      "picture": "../../assets/Images/bat.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Flash",
+      "email": "flash@gmail.com",
+      "adress": "department",
+      "powers": "speed",
+      "picture": "../../assets/Images/flash.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Spiderman",
+      "email": "spiderman@gmail.com",
+      "adress": "department",
+      "powers": "bug",
+      "picture": "../../assets/Images/spider.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Ironman",
+      "email": "ironman@gmail.com",
+      "adress": "skyscraper",
+      "powers": "rich-iron_suit",
+      "picture": "../../assets/Images/iron.webp"
+    }
+  ]
+}

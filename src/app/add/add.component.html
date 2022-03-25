@@ -1,0 +1,26 @@
+<div class="container text-light">
+  <form class="d-flex flex-column justify-content-around"
+    (ngSubmit)="addHero(name.value, email.value, adress.value, image.value, powers.value)">
+    <div class="form-group">
+      <label class="mt-2">Name</label>
+      <input #name type="text" class="form-control" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label class="mt-2">Email</label>
+      <input #email type="text" class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label class="mt-2">Address</label>
+      <input #adress type="text" class="form-control" placeholder="Address">
+    </div>
+    <div class="form-group">
+      <label class="mt-2">Powers</label>
+      <input #powers type="text" class="form-control" placeholder="Powers">
+    </div>
+    <div class="form-group">
+      <label class="mt-2">Picture</label>
+      <input #image type="text" class="form-control" placeholder="Picture">
+    </div>
+    <button type="submit" class="btn btn-danger mt-3">Submit</button>
+  </form>
+</div>
