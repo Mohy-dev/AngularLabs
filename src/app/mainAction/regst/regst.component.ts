@@ -14,26 +14,16 @@ export class RegstComponent implements OnInit {
   }
 
   formValidation = new FormGroup({
-    name1: new FormControl("", Validators.required),
-    name2: new FormControl("", Validators.minLength(3)),
-    name3: new FormControl("", Validators.pattern('/^[A-Za-z]+$/')),
-    age: new FormControl(null,[Validators.min(20),Validators.max(40)])
+    name: new FormControl("", [Validators.required, Validators.minLength(3), Validators.pattern('/^[A-Za-z]+$/')]),
+    age: new FormControl(null,[Validators.required, Validators.min(20),Validators.max(40)])
   });
 
-  get isNameValid1(){
-    return !this.formValidation.controls["name1"].valid;
-  }
-
-  get isNameValid2(){
-    return this.formValidation.controls["name2"].valid;
-  }
-
-  get isNameValid3(){
-    return !this.formValidation.controls["name3"].valid;
+  get isNameValid(){
+    return this.formValidation.controls["name"];
   }
 
   get isAgeValid(){
-    return this.formValidation.controls["age"].valid;
+    return this.formValidation.controls["age"];
   }
 
 

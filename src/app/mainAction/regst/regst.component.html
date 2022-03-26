@@ -3,21 +3,29 @@
     <input [(ngModel)]="name" formControlName="name" type="text" placeholder="Name"
       class="text-center m-2 form-control w-30" style="width:40%; margin: 1px auto;">
   </div>
-  <div *ngIf="isNameValid1" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
-    Name is Required
-  </div>
-  <div *ngIf="!isNameValid2" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
-    Min Length is 3 char
-  </div>
-  <div *ngIf="!isNameValid3" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
-    Only Char. are allowed!!
+  <div *ngIf="name?.invalid && (name?.dirty || name?.touched || name?.pattern)" class="text-light">
+    <div *ngIf="name?.errors?.['required']" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
+      Name is Required
+    </div>
+    <div *ngIf="name?.errors?.['minlength']" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
+      Min Length is 3 char
+    </div>
+    <div *ngIf="name?.errors?.['pattern']" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
+      Only Char. are allowed!!
+    </div>
   </div>
   <div class="form-group row justify-content-center">
     <input [(ngModel)]="age" formControlName="age" type="number" placeholder="Age"
       class="text-center m-2 form-control w-30" style="width:40%; margin: 1px auto;">
   </div>
-  <div *ngIf="!isAgeValid" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
-    Accepted age from 20 to 40!! sorry
+  <div *ngIf="age?.invalid && (age?.dirty || age?.touched)" class="text-light">
+    <div *ngIf="age?.errors?.['required']" class="bg-danger text-center w-30" style="width:30%; margin: 0.2rem auto;">
+      Age is required, please enter it
+    </div>
+    <div *ngIf="age?.errors?.['min'] || age?.errors?.['max']" class="bg-danger text-center w-30"
+      style="width:30%; margin: 0.2rem auto;">
+      Your age is not applicable, sorry
+    </div>
   </div>
   <div class="form-group row justify-content-center">
     <input (click)="AddStudent()" type="submit" value="Submit" class="btn btn-outline-danger w-20"
